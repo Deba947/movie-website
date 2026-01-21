@@ -1,0 +1,12 @@
+.search-bar-container {
+  padding: 24px;
+  border-radius: 12px !important;
+  margin-bottom: 32px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;
+}
+
+.search-bar-container .MuiTextField-root,
+.search-bar-container .MuiFormControl-root {
+  background-color: white;
+  border-radius: 8px;
+}

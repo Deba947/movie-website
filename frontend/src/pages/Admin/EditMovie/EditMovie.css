@@ -1,0 +1,42 @@
+.edit-movie-wrapper {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding-bottom: 40px;
+}
+
+.edit-poster-box {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.edit-poster-box:hover {
+  border-color: #3f51b5;
+}
+
+.edit-poster-preview {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+}
+
+.edit-upload-icon {
+  font-size: 60px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.edit-scene-preview-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.edit-scene-img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}

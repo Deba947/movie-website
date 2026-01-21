@@ -1,0 +1,17 @@
+.manage-users-page {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding-bottom: 40px;
+}
+
+.table-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.table-header .MuiTableCell-root {
+  color: white;
+  font-weight: 700;
+}
+.MuiTableRow-root:hover {
+  background-color: rgba(102, 126, 234, 0.05);
+}

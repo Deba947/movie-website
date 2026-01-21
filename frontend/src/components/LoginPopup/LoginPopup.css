@@ -1,0 +1,23 @@
+.MuiDialog-paper {
+  border-radius: 16px !important;
+}
+
+.MuiTab-root {
+  text-transform: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.MuiButton-contained {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  text-transform: none;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.MuiButton-contained:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+}

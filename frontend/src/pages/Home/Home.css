@@ -1,0 +1,35 @@
+.home-page {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding-bottom: 40px;
+  overflow-x: hidden;
+}
+
+.page-title {
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🔥 PERFECT MOVIE GRID */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* EXACTLY 4 CARDS */
+  gap: 24px; /* EVEN spacing */
+  margin-top: 24px;
+}
+
+/* Tablets → 2 cards */
+@media (max-width: 900px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile → 1 card */
+@media (max-width: 600px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+}

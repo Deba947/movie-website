@@ -1,0 +1,19 @@
+.manage-movies-page {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding-bottom: 40px;
+}
+
+.table-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.table-header .MuiTableCell-root {
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+}
+
+.MuiTableRow-root:hover {
+  background-color: rgba(102, 126, 234, 0.05) !important;
+}
