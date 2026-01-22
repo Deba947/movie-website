@@ -29,7 +29,7 @@ const EditMovie = () => {
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
 
-  s
+  
   const [sceneImages, setSceneImages] = useState([]);
   const [scenePreviews, setScenePreviews] = useState([]);
 
