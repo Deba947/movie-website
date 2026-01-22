@@ -5,17 +5,17 @@ import { MovieContext } from '../../context/MovieContext';
 const ProtectedRoute = ({ children, adminOnly = false }) => {
   const { token, user, authLoading } = useContext(MovieContext);
 
-  // ⏳ WAIT until token is restored
+  // WAIT until token is restored
   if (authLoading) {
     return null; // or spinner
   }
 
-  // 🔒 Not logged in
+  // Not logged in
   if (!token) {
     return <Navigate to="/" replace />;
   }
 
-  // 🔐 Admin only
+  //  Admin only
   if (adminOnly && user?.role !== 'admin') {
     return <Navigate to="/" replace />;
   }

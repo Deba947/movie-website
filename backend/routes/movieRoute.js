@@ -9,17 +9,17 @@ import {
   getMovie
 } from "../controllers/movieController.js";
 import { authMiddleware, adminMiddleware } from "../middleware/auth.js";
-import upload from "../middleware/upload.js"; // ✅ USE CLOUDINARY
+import upload from "../middleware/upload.js"; // CLOUDINARY
 
 const movieRouter = express.Router();
 
-/* ===================== PUBLIC ROUTES ===================== */
+//PUBLIC ROUTES 
 movieRouter.get("/list", listMovies);
 movieRouter.get("/sorted", getSortedMovies);
 movieRouter.get("/search", searchMovies);
 movieRouter.get("/:id", getMovie);
 
-/* ===================== ADMIN ROUTES ===================== */
+//ADMIN ROUTES 
 movieRouter.post(
   "/add",
   authMiddleware,

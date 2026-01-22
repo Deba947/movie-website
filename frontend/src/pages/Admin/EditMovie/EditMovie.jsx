@@ -22,14 +22,14 @@ import './EditMovie.css';
 const EditMovie = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { getMovieById, updateMovie } = useContext(MovieContext); // ✅ url removed
+  const { getMovieById, updateMovie } = useContext(MovieContext); 
 
   const [loading, setLoading] = useState(true);
 
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
 
-  // ✅ Scene images
+  s
   const [sceneImages, setSceneImages] = useState([]);
   const [scenePreviews, setScenePreviews] = useState([]);
 
@@ -54,7 +54,7 @@ const EditMovie = () => {
 
   useEffect(() => {
     loadMovie();
-    // eslint-disable-next-line
+    
   }, [id]);
 
   const loadMovie = async () => {
@@ -71,7 +71,7 @@ const EditMovie = () => {
         cast: movie.cast || []
       });
 
-      // ✅ Cloudinary URLs
+      
       setImagePreview(movie.image);
 
       if (movie.sceneImages?.length) {
@@ -93,7 +93,7 @@ const EditMovie = () => {
     }
   };
 
-  // ✅ Scene images (max 6)
+  
   const handleSceneImagesChange = (e) => {
     const files = Array.from(e.target.files).slice(0, 6);
     setSceneImages(files);

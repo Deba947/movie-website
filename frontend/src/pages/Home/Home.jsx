@@ -26,7 +26,7 @@ const Home = () => {
 
   const [searchParams, setSearchParams] = useSearchParams();
 
-  /* ---------- Read from URL ---------- */
+  
   const [searchQuery, setSearchQuery] = useState(
     searchParams.get('search') || ''
   );
@@ -42,13 +42,13 @@ const Home = () => {
 
   const ITEMS_PER_PAGE = 8;
 
-  /* ---------- Load Movies on Mount ---------- */
+  // Load Movies on Mount 
   useEffect(() => {
     loadMovies(currentPage);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, []);
 
-  /* ---------- Update URL ---------- */
+  
   const updateURL = (page, search, sortBy, order) => {
     const params = new URLSearchParams();
 
@@ -62,7 +62,7 @@ const Home = () => {
     setSearchParams(params);
   };
 
-  /* ---------- Fetch Logic ---------- */
+  // Fetch Logic 
   const loadMovies = async (page) => {
     if (searchQuery) {
       await searchMovies(searchQuery, page, ITEMS_PER_PAGE);
@@ -78,7 +78,7 @@ const Home = () => {
     }
   };
 
-  /* ---------- Search ---------- */
+  // Search 
   const handleSearch = async (query) => {
     setSearchQuery(query);
     setSortParams({ sortBy: '', order: 'desc' });
@@ -93,7 +93,7 @@ const Home = () => {
     }
   };
 
-  /* ---------- Sort ---------- */
+ // Sort 
   const handleSort = async (sortBy, order) => {
     setSortParams({ sortBy, order });
     setSearchQuery('');
@@ -108,7 +108,7 @@ const Home = () => {
     }
   };
 
-  /* ---------- Pagination ---------- */
+  // Pagination 
   const handlePageChange = async (page) => {
     setCurrentPage(page);
     updateURL(page, searchQuery, sortParams.sortBy, sortParams.order);
@@ -142,14 +142,14 @@ const Home = () => {
           initialSort={sortParams}
         />
 
-        {/* Content */}
+        
         {loading ? (
           <Box display="flex" justifyContent="center" py={8}>
             <CircularProgress size={60} />
           </Box>
         ) : movies && movies.length > 0 ? (
           <>
-            {/* Movie Grid */}
+            
 <Box className="movie-grid">
   {movies.map((movie) => (
     <MovieCard

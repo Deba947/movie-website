@@ -19,7 +19,7 @@ const Search = () => {
   const { url, movies, moviesPagination, searchMovies, loading } = useContext(MovieContext);
   const [query, setQuery] = useState('');
   const [hasSearched, setHasSearched] = useState(false);
-  const ITEMS_PER_PAGE = 8; // 4 columns × 2 rows
+  const ITEMS_PER_PAGE = 8; 
 
   const handleSearch = async (page = 1) => {
     if (!query.trim()) return;
@@ -82,7 +82,7 @@ const Search = () => {
                 Search Results ({moviesPagination.total} found)
               </Typography>
               
-              {/* 4 Columns Grid */}
+              
               <Grid container spacing={3}>
                 {movies.map((movie) => (
                   <Grid item xs={12} sm={6} md={4} lg={3} key={movie._id}>

@@ -1,7 +1,7 @@
 import movieModel from "../models/movieModel.js";
 import queueModel from "../models/queueModel.js";
 
-/* ======================== ADD MOVIE ======================== */
+// ADD MOVIE 
 export const addMovie = async (req, res) => {
   try {
     if (!req.files?.image) {
@@ -29,8 +29,8 @@ export const addMovie = async (req, res) => {
       genre: req.body.genre,
       director: req.body.director,
       cast: req.body.cast ? JSON.parse(req.body.cast) : [],
-      image: req.files.image[0].path, // ✅ Cloudinary URL
-      sceneImages: sceneImages.map(f => f.path), // ✅ Cloudinary URLs
+      image: req.files.image[0].path, 
+      sceneImages: sceneImages.map(f => f.path), 
       createdBy: req.body.userId || null
     };
 
@@ -55,7 +55,7 @@ export const addMovie = async (req, res) => {
   }
 };
 
-/* ======================== LIST MOVIES ======================== */
+//LIST MOVIES 
 export const listMovies = async (req, res) => {
   try {
     const page = Number(req.query.page) || 1;
@@ -86,7 +86,7 @@ export const listMovies = async (req, res) => {
   }
 };
 
-/* ======================== SORT MOVIES ======================== */
+// SORT MOVIES 
 export const getSortedMovies = async (req, res) => {
   try {
     const { sortBy, order } = req.query;
@@ -125,7 +125,7 @@ export const getSortedMovies = async (req, res) => {
   }
 };
 
-/* ======================== SEARCH MOVIES ======================== */
+// SEARCH MOVIES
 export const searchMovies = async (req, res) => {
   try {
     const { query } = req.query;
@@ -166,7 +166,7 @@ export const searchMovies = async (req, res) => {
   }
 };
 
-/* ======================== GET SINGLE MOVIE ======================== */
+//GET SINGLE MOVIE
 export const getMovie = async (req, res) => {
   try {
     const movie = await movieModel.findById(req.params.id);
@@ -185,7 +185,7 @@ export const getMovie = async (req, res) => {
   }
 };
 
-/* ======================== UPDATE MOVIE ======================== */
+//UPDATE MOVIE
 export const updateMovie = async (req, res) => {
   try {
     const { id } = req.params;
@@ -241,7 +241,7 @@ export const updateMovie = async (req, res) => {
   }
 };
 
-/* ======================== DELETE MOVIE ======================== */
+//DELETE MOVIE 
 export const deleteMovie = async (req, res) => {
   try {
     const { id } = req.params;
@@ -264,7 +264,7 @@ export const deleteMovie = async (req, res) => {
   }
 };
 
-/* ======================== QUEUE PROCESSOR ======================== */
+// QUEUE PROCESSOR 
 async function processQueue() {
   const items = await queueModel.find({ status: "pending" }).limit(10);
 

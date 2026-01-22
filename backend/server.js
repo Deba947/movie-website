@@ -21,7 +21,7 @@ connectDB();
 app.use("/api/movies", movieRouter);
 app.use("/api/user", userRouter);
 
-// Health check
+
 app.get("/", (req, res) => {
     res.send("Movie API is Running");
 });

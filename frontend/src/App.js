@@ -51,12 +51,12 @@ function App() {
         <LoginPopup open={showLogin} setOpen={setShowLogin} />
 
         <Routes>
-          {/* ================= PUBLIC ROUTES ================= */}
+          
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/movie/:id" element={<MovieDetail />} />
 
-          {/* ================= ADMIN REDIRECT (OLD LINK) ================= */}
+          
           <Route
             path="/admin/manage"
             element={
@@ -66,7 +66,7 @@ function App() {
             }
           />
 
-          {/* ================= ADMIN DASHBOARD ================= */}
+          
           <Route
             path="/admin"
             element={
@@ -76,7 +76,7 @@ function App() {
             }
           />
 
-          {/* ================= ADMIN MOVIE ACTIONS ================= */}
+          
           <Route
             path="/admin/add"
             element={

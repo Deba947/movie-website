@@ -25,7 +25,7 @@ const AddMovie = () => {
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
 
-  // ✅ Scene images
+  // Scene images
   const [sceneImages, setSceneImages] = useState([]);
   const [scenePreviews, setScenePreviews] = useState([]);
 
@@ -60,7 +60,7 @@ const AddMovie = () => {
     }
   };
 
-  // ✅ Scene images handler (max 6)
+  // Scene images handler (max 6)
   const handleSceneImagesChange = (e) => {
     const files = Array.from(e.target.files).slice(0, 6);
     setSceneImages(files);
@@ -103,7 +103,7 @@ const AddMovie = () => {
     data.append('cast', JSON.stringify(formData.cast));
     data.append('image', image);
 
-    // ✅ append scene images
+    //  append scene images
     sceneImages.forEach(img => data.append('sceneImages', img));
 
     const success = await addMovie(data);

@@ -10,7 +10,7 @@ const AdminDashboard = () => {
 
   return (
     <Container maxWidth="xl" sx={{ py: 3 }}>
-      {/* 🔹 Top Left Toggle Buttons */}
+      
       <Box display="flex" gap={2} mb={3}>
         <Button
           variant={activeTab === "movies" ? "contained" : "outlined"}
@@ -29,7 +29,7 @@ const AdminDashboard = () => {
         </Button>
       </Box>
 
-      {/* 🔹 Conditional Rendering */}
+      
       {activeTab === "movies" && <ManageMovies />}
       {activeTab === "users" && <ManageUsers />}
     </Container>

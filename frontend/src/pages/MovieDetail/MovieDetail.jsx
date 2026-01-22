@@ -36,7 +36,7 @@ const MovieDetail = () => {
 
   useEffect(() => {
     loadMovie();
-    // eslint-disable-next-line
+    
   }, [id]);
 
   const loadMovie = async () => {
